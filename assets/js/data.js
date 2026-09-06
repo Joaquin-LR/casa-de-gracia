@@ -1,4 +1,4 @@
-const DATA = {
+export const DATA = {
   anuncios: [
     {
       url: "assets/img/anuncio-septiembre-mes-biblia.jpeg",

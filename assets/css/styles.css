@@ -207,9 +207,20 @@ html, body {
 }
 
 /* ==========================================
-   7. AJUSTES RESPONSIVOS EXTRA (MOBILE FIRST)
+   7. FIX POSICIONAMIENTO MODAL BIBLIA (MOBILE)
    ========================================== */
+/* Anula el centrado vertical de Tailwind en pantallas chicas */
 @media (max-width: 639px) {
+  #modal-biblia {
+    align-items: flex-start !important;
+    padding-top: 1rem !important;
+  }
+
+  #modal-biblia > div {
+    margin-top: 0 !important;
+    margin-bottom: auto !important;
+  }
+
   #carousel-container {
     border-radius: 0.5rem;
   }
@@ -220,5 +231,69 @@ html, body {
 
   .carousel-btn {
     padding: 0.5rem;
+  }
+}
+
+/* ==========================================
+   8. SOPORTE PARA FUENTES GRANDES (ACCESIBILIDAD MÓVIL)
+   ========================================== */
+
+/* Previene el desbordamiento de textos en pantallas con fuentes grandes */
+body {
+  /* Evita que el navegador fuerce un escalado no deseado en dispositivos móviles */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Permitir que los textos rompan palabras largas si no caben */
+h1, h2, h3, h4, p, span, button, input {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* Ajustes adaptativos para celulares */
+@media (max-width: 639px) {
+
+  /* 1. Modales flexibles: evitar alturas fijas rígidas */
+  #modal-biblia > div,
+  #modal-predica > div {
+    max-height: 88vh !important;
+    height: auto !important;
+  }
+
+  /* 2. Contenedor del buscador e inputs: auto-ajuste de altura */
+  #contenedor-busqueda-biblia,
+  #input-busqueda,
+  #input-buscar-libro {
+    min-height: 44px; /* Tamaño mínimo recomendado para interacción táctil */
+    height: auto !important;
+  }
+
+  /* 3. Permitir que los botones envuelvan el texto si el tamaño de fuente es gigante */
+  .biblia-btn-card,
+  #btn-antiguo-testamento,
+  #btn-nuevo-testamento {
+    height: auto !important;
+    white-space: normal !important;
+    padding: 0.875rem 1rem !important;
+  }
+
+  /* 4. Flexibilidad en la cuadrícula de capítulos/libros */
+  #grid-libros button {
+    min-height: 48px;
+    height: auto !important;
+    padding: 0.5rem !important;
+    white-space: normal !important;
+    line-height: 1.2;
+  }
+
+  /* 5. Evitar recortar texto en el Navbar */
+  header h1 {
+    font-size: clamp(1rem, 4vw, 1.25rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  header span {
+    white-space: normal !important;
   }
 }

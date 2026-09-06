@@ -1,0 +1,22 @@
+{
+  "short_name": "Casa de Gracia",
+  "name": "Casa de Gracia",
+  "icons": [
+    {
+      "src": "assets/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "display": "standalone"
+}
