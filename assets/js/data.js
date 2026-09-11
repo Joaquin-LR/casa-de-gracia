@@ -1,16 +1,16 @@
 export const DATA = {
   anuncios: [
     {
+      url: "assets/img/anuncio-oracion-por-chile.jpeg",
+      alt: "Noche de Oración - Viernes desde las 22:00 h"
+    },
+    {
       url: "assets/img/anuncio-septiembre-mes-biblia.jpeg",
       alt: "Organigrama Septiembre - Mes de la Biblia"
     },
     {
       url: "assets/img/anuncio-martes-intercesion.jpeg",
       alt: "Noche de Intercesión - Martes a las 20:00 h"
-    },
-    {
-      url: "assets/img/anuncio-viernes-noche-oracion.jpeg",
-      alt: "Noche de Oración - Viernes desde las 22:00 h"
     }
   ],
   
